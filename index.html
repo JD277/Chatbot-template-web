@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chatbot Landing Page</title>
+    <title>Kneazle</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">AI Chatbot</a>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand text-simple" href="#">Kneazle</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#features">Características</a>
-                </li>
-                <li class="nav-item">
+                <li class="nav-item text-simple">
                     <a class="nav-link" href="#about">Sobre nosotros</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link text-simple" href="#features">Recomendaciones</a>
+                </li>
+                <li class="nav-item text-simple">
                     <a class="nav-link" href="chatbot.html">Empezar</a>
                 </li>
             </ul>
@@ -31,62 +31,231 @@
     </nav>
 
     <!-- Hero Section -->
+<!-- Hero Section Modificado -->
+    <div class="z-2 backimg2"></div>
+    <div class="z-2 backimg"></div>
     <header class="hero-section vh-100">
-        <div class="container text-center">
-            <h1 class="display-4">Welcome to AI Chatbot</h1>
-            <p class="lead">Your personal AI teacher assistant.</p>
-            <a href="chatbot.html" class="btn btn-primary btn-lg">Empezar</a>
+        <div id="chatbotCarousel" class="carousel slide vh-100" data-ride="carousel" data-interval="5000">
+            <!-- Indicadores -->
+            <ol class="carousel-indicators">
+                <li data-target="#chatbotCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#chatbotCarousel" data-slide-to="1"></li>
+                <li data-target="#chatbotCarousel" data-slide-to="2"></li>
+                <li data-target="#chatbotCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Slides -->
+            <div class="carousel-inner vh-100">
+                <!-- Slide 0 - Original -->
+                <div class="carousel-item active vh-100">
+                    <div class="container text-center d-flex align-items-center justify-content-center vh-100">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="display-4 main-text">Bienvenido a Kneazle</h1>
+                                <div class="feature-icon mb-4">
+                                    <i class="fa-solid fa-graduation-cap fa-5x"></i>
+                                </div>
+                                <p class="px-5">IA interactiva enfocada en tu mejor rendimiento</p>
+                                <a href="chatbot.html" class="btn1">Empezar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 1 - Hedwig -->
+                <div class="carousel-item vh-100">
+                    <div class="container text-center d-flex align-items-center justify-content-center vh-100">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="display-4 main-text">Hedwig</h1>
+                                <p class="lead text-simple">Tu experta en idiomas</p>
+                                <div class="feature-icon mb-4">
+                                    <i class="fas fa-language fa-5x text-white"></i>
+                                </div>
+                                <p class="px-5">Domina múltiples idiomas con nuestra IA especializada en lingüística.<br>
+                                Traducciones precisas, práctica conversacional y aprendizaje contextualizado.</p>
+                                <a href="chatbot.html" class="btn1 mt-3">Comenzar con Hedwig</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Slide 2 - Bellatrix -->
+                 <div class="carousel-item vh-100">
+                    <div class="container text-center d-flex align-items-center justify-content-center vh-100">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="display-4 main-text">Bellatrix</h1>
+                                <p class="lead text-simple">Tu mentora cientifica</p>
+                                <div class="feature-icon mb-4">
+                                    <i class="fas fa-atom fa-5x text-white"></i>
+                                </div>
+                                <p class="px-5">Resolución de problemas complejos en matemáticas, física y química.<br>
+                                Explicaciones detalladas, ejercicios prácticos y simulaciones interactivas.</p>
+                                <a href="chatbot.html" class="btn1 mt-3">Aprender con Bellatrix</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Slide 3 - Dobby -->
+                <div class="carousel-item vh-100">
+                    <div class="container text-center d-flex align-items-center justify-content-center vh-100">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="display-4 main-text">Dobby</h1>
+                                <p class="lead text-simple">Tu profesor conversacional</p>
+                                <div class="feature-icon mb-4">
+                                    <i class="fas fa-comments fa-5x text-white"></i>
+                                </div>
+                                <p class="px-5">Mejora tus habilidades comunicativas con conversaciones naturales.<br>
+                                Práctica de diálogos, corrección en tiempo real y retroalimentación personalizada.</p>
+                                <a href="chatbot.html" class="btn1 mt-3">Conversar con Dobby</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+        <!-- Controles -->
+        <a class="carousel-control-prev" href="#chatbotCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#chatbotCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </header>
 
+
+    <section id="about" class="container-fluid vw-100 d-flex vh-100 bg-dark2  align-items-center">
+        <div class="container flex-column sobre-nosotros">
+            <h1 class="display-6 title">Sobre nosotros</h1>
+            <p class="px-5 text-light">Somos un equipo de estudiantes de la Universidad de Oriente apasionados por la tecnología y la educación. Nuestra misión es brindarte herramientas innovadoras que potencien tu aprendizaje, facilitando el acceso a asistentes inteligentes y recursos diseñados para mejorar tu experiencia académica.
+
+                <br> <br> Además de nuestros asistentes, contamos con una sección de Recomendaciones, donde te sugerimos otras herramientas útiles que pueden complementar tu estudio y ayudarte a alcanzar tus objetivos de manera más eficiente. Creemos que el uso de la tecnología adecuada puede marcar la diferencia en tu rendimiento académico, y queremos asegurarnos de que tengas acceso a las mejores opciones disponibles.
+                
+                Nos esforzamos por ofrecerte un entorno de aprendizaje dinámico y eficiente. ¡Explora nuestra plataforma y descubre cómo podemos ayudarte a llevar tus estudios al siguiente nivel!</p>
+        </div>
+        <div class="position-absolute container-fluid img-nosotros d-flex position-relative h-100 justify-content-center align-items-center">
+        </div>
+    </div>
+    </section>
     <!-- Features Section -->
-    <section id="features" class="features-section vh-100 pb-1">
-        <h1 class="display-6 position-relative title">Welcome to AI Chatbot</h1>
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-robot fa-4x"></i>
-                    <h3>Advanced AI</h3>
-                    <p>Experience the power of cutting-edge AI technology.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-user-friends fa-4x"></i>
-                    <h3>Interactive Learning</h3>
-                    <p>Engage with AI teachers for a personalized learning experience.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-shield-alt fa-4x"></i>
-                    <h3>Secure & Private</h3>
-                    <p>Your data is secure and private with our robust security measures.</p>
+    <section id="features" class="features-section pb-1">
+        <div class="content">
+            <h1 class="display-6 position-relative title fs-1">Recomendaciones</h1>
+                <div class="row justify-content-center cards">
+                    <!-- Redacción de informes -->
+                    <div class="col-md-2 text-center mb-4">
+                        <div class="feature-card p-4 h-100">
+                            <i class="fas fa-edit fa-4x mb-3 text-light"></i>
+                            <h3 class="mb-3" style="font-family: 'Hunters'; font-size: xx-large;">Redaccion de Informes</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="https://www.grammarly.com" target="_blank" class="text-decoration-none d-block p-2 feature-link">
+                                        Grammarly
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://quillbot.com" target="_blank" class="text-decoration-none d-block p-2 feature-link">
+                                        Quillbot
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <!-- Presentaciones -->
+                    <div class="col-md-2 text-center mb-4">
+                        <div class="feature-card p-4 h-100">
+                            <i class="fas fa-chalkboard-teacher fa-4x mb-3 text-light"></i>
+                            <h3 class="mb-3" style="font-family: 'Hunters'; font-size: xx-large;">Creacion de presentaciones</h3>
+                            <ul class="list-unstyled">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="https://gamma.app" target="_blank" class="text-decoration-none d-block p-2 feature-link">
+                                            Gamma
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://canva.com" target="_blank" class="text-decoration-none d-block p-2 feature-link">
+                                           Canva
+                                        </a>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Mapas Mentales -->
+                    <div class="col-md-2 text-center mb-4">
+                        <div class="feature-card p-4 h-100">
+                            <i class="fas fa-project-diagram fa-4x mb-3 text-light"></i>
+                            <h3 class="mb-3" style="font-family: 'Hunters'; font-size: xx-large;">Mapas Conceptuales</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="https://www.mindmeister.com" target="_blank" class="text-decoration-none d-block p-2 feature-link">
+                                        MindMeister
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.lucidchart.com" target="_blank" class="text-decoration-none d-block p-2 feature-link">
+                                        Lucidchart
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <!-- Asistentes de Estudio -->
+                    <div class="col-md-2 text-center mb-4">
+                        <div class="feature-card p-4 h-100">
+                            <i class="fas fa-graduation-cap fa-4x mb-3 text-light"></i>
+                            <h3 class="mb-3" style="font-family: 'Hunters'; font-size: xx-large;">Asistentes de Estudio</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="https://quizlet.com" target="_blank" class="text-decoration-none d-block p-2 feature-link">
+                                        Quizlet
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="https://socratic.org" target="_blank" class="text-decoration-none d-block p-2 feature-link">
+                                        Socratic
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://knowt.io" target="_blank" class="text-decoration-none d-block p-2 feature-link">
+                                        Knowt
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section bg-light vh-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>About Us</h2>
-                    <p>We are dedicated to providing the best AI-powered educational tools to help you learn and grow. Our AI chatbot is designed to offer personalized assistance and support for a variety of subjects.</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="about-image.jpg" class="img-fluid" alt="About Us">
-                </div>
-            </div>
-        </div>
-    </section>
 
- 
 
-    <!-- Footer -->
-    <footer class="footer bg-dark text-white text-center py-3">
-        <p>&copy; 2025 AI Chatbot. All Rights Reserved.</p>
-    </footer>
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="index.js"></script>
+    <script>
+        // Script mejorado con jQuery para mejor compatibilidad
+        $(document).ready(function() {
+            $('#navbarNav').on('show.bs.collapse', function () {
+            $('#overlay').fadeIn(300);
+            });
+            
+            $('#navbarNav').on('hide.bs.collapse', function () {
+            $('#overlay').fadeOut(300);
+            });
+        });
+    </script>
 </body>
 </html>

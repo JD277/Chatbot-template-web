@@ -1,20 +1,80 @@
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #343a40;
+    --primary-color: #0B1D5D;
+    --secondary-color: #382783 ;
     --light-color: #f8f9fa;
-    --dark-color: #212529;
+    --dark-color: #094F80;
+}
+@font-face {
+    font-family:'Hunters' ;
+    src: url("./Hunters.otf");
+} 
+
+/* Estilo para navegadores basados en WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho de la scrollbar */
 }
 
-body {
-    font-family: Arial, sans-serif;
+::-webkit-scrollbar-track {
+    background: var(--secondary-color); /* Color de fondo */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark-color); /* Color del scroll */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #1572b6, #0d5ea8); /* Color al pasar el mouse */
+}
+
+body{
+    overflow-x: hidden !important;
+    width: 100%;
+    font-family: arial, sans-serif;
+}
+.main-text {
+    font-family: 'Hunters';
+    font-size: 5rem;
+}
+
+.text-simple{
+    font-family: 'Hunters';
+    font-size: 2rem;
 }
 
 .navbar {
     padding: 1rem 2rem;
 }
+.content{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.cards{
+    background-color: #3C2B72;
+    margin-left: 0;
 
-.hero-section {
+    margin-right: 0;
+}
+.backimg{
+    top: 0;
     background: var(--primary-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.5;
+}
+.backimg2{
+    top: 0;
+    background: url("./bg.jpg") top/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-top-left-radius: 10px;
+}
+.hero-section {
     color: white;
     padding: 5rem 0;
     text-align: center;
@@ -25,16 +85,25 @@ body {
 }
 
 .features-section {
-    padding: 3rem 0;
+    background-color: #3C2B72;
     justify-content: center;
-    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden; /* Evita cualquier desbordamiento */
+    padding: 3rem 15px;
+}
+.feature-card {
+    max-width: 90%; /* Evita que sobrepase el ancho disponible */
+    overflow: hidden; /* Previene desbordamiento de elementos internos */
 }
 .title{
+    color: var(--light-color);
+    font-family: 'Hunters';
     text-align: center;
-    top: 1rem;
+    font-size: 6em;
 }
 .features-section .fa-4x {
     color: var(--primary-color);
@@ -56,4 +125,208 @@ body {
     background: var(--dark-color);
     color: white;
     padding: 1rem 0;
+}
+.navbar {
+    height: 12%;
+}
+.bg-dark{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: var(--secondary-color) !important;
+}
+.btn1{
+    font-size: 1.5em;
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--light-color);
+    transition: 0.5s;
+    text-decoration: none;
+    background: var(--dark-color);
+}
+
+.btn1:hover{
+    color: var(--light-color);
+    text-decoration: none;
+    transition: 0.5s;
+    background: none;
+    border: 2px solid var(--dark-color) !important;
+}
+
+/* Mejoras para el Carousel */
+.carousel-item {
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid transparent;
+}
+
+.carousel-indicators .active {
+    background-color: var(--light-color);
+    border-color: var(--dark-color);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    background-size: 100% 100%;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23f8f9fa' viewBox='0 0 16 16'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23f8f9fa' viewBox='0 0 16 16'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.feature-icon {
+    transition: transform 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .main-text {
+        font-size: 3.5rem;
+    }
+    
+    .text-simple {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    .content{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 1.5em;
+        justify-content: center;
+        align-items: center;
+    }
+    .title{
+        font-size: 3rem;
+    }
+}
+
+/* Asegurar que el menú colapsado esté por encima del contenido */
+.navbar-collapse {
+    z-index: 1050; /* Mayor que el overlay */
+    position: relative;
+  }
+  
+  /* En móviles */
+  @media (max-width: 992px) {
+    body{
+        overflow-x: hidden;
+    }
+    .navbar-collapse {
+      position: fixed;
+      top: 56px; /* Altura de tu navbar */
+      left: 0;
+      right: 0;
+      background: var(--secondary-color);
+      padding: 20px;
+      max-height: calc(100vh - 56px) !important;
+      overflow-y: auto;
+    }
+    .feature-card{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+.bg-dark2{
+    background-color: var(--primary-color);
+    flex-direction: column;
+    padding: 0px !important;
+    margin: 0px;
+}
+.sobre-nosotros{
+    z-index:1000;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+
+
+}
+.sobre-nosotros p{
+    height: 100vh;
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.sobre-nosotros h1{
+    align-items:center;
+}
+.img-nosotros{
+    padding: 0px;
+    margin: 0px;
+    opacity: 0.3;
+    background: url("./imagen2.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+  /* styles2.css */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100; /* Entre navbar (1050) y contenido */
+    display: none;
+  }
+
+  /* styles2.css */
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    max-width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--light-color);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-link {
+    color: var(--light-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.feature-link:hover {
+    background: var(--dark-color);
+    color: var(--light-color);
+    text-decoration: none;
+    padding-left: 1.5rem !important;
+}
+
+.feature-card i {
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover i {
+    transform: scale(1.1);
 }

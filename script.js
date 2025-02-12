@@ -3,7 +3,7 @@ let selectedTeacher = null;
 
 // ----------------------------------API config---------------------------
 
-const API_KEY = ""; 
+const API_KEY = "AIzaSyA2b-4VLYqf-kOBlp40UU20d52L4yCb2f4"; 
 const genAI = new GoogleGenerativeAI(API_KEY);
 // ----------------------------------API config---------------------------
 
